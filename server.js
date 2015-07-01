@@ -25,7 +25,6 @@ app.get("/", function (req, res) {
 });
 
 app.get("/getAttachments", function (req, res) {
-    console.log(req.query.filename);
     res.sendFile("/uploads/" + req.query.filename, {root: __dirname});
 });
 
